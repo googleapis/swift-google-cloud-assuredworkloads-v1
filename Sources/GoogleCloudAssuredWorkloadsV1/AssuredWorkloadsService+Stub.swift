@@ -31,11 +31,11 @@ extension Clients {
 
     func updateWorkload(
       request: UpdateWorkloadRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAssuredworkloadsV1.Workload
+    ) async throws -> GoogleCloudAssuredWorkloadsV1.Workload
 
     func restrictAllowedResources(
       request: RestrictAllowedResourcesRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAssuredworkloadsV1.RestrictAllowedResourcesResponse
+    ) async throws -> GoogleCloudAssuredWorkloadsV1.RestrictAllowedResourcesResponse
 
     func deleteWorkload(
       request: DeleteWorkloadRequest, options: GoogleCloudGax.RequestOptions
@@ -43,11 +43,11 @@ extension Clients {
 
     func getWorkload(
       request: GetWorkloadRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAssuredworkloadsV1.Workload
+    ) async throws -> GoogleCloudAssuredWorkloadsV1.Workload
 
     func listWorkloads(
       request: ListWorkloadsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAssuredworkloadsV1.ListWorkloadsResponse
+    ) async throws -> GoogleCloudAssuredWorkloadsV1.ListWorkloadsResponse
 
     func listOperations(
       request: GoogleLongrunning.ListOperationsRequest, options: GoogleCloudGax.RequestOptions
@@ -94,7 +94,7 @@ extension Clients {
 
     public func updateWorkload(
       request: UpdateWorkloadRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAssuredworkloadsV1.Workload {
+    ) async throws -> GoogleCloudAssuredWorkloadsV1.Workload {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.workload.map({ $0.name }), !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding(
@@ -116,12 +116,12 @@ extension Clients {
       }
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudAssuredworkloadsV1.Workload.self, from: data)
+        GoogleCloudAssuredWorkloadsV1.Workload.self, from: data)
     }
 
     public func restrictAllowedResources(
       request: RestrictAllowedResourcesRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAssuredworkloadsV1.RestrictAllowedResourcesResponse {
+    ) async throws -> GoogleCloudAssuredWorkloadsV1.RestrictAllowedResourcesResponse {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -138,7 +138,7 @@ extension Clients {
       req.httpBody = try JSONEncoder().encode(request)
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudAssuredworkloadsV1.RestrictAllowedResourcesResponse.self, from: data)
+        GoogleCloudAssuredWorkloadsV1.RestrictAllowedResourcesResponse.self, from: data)
     }
 
     public func deleteWorkload(
@@ -163,7 +163,7 @@ extension Clients {
 
     public func getWorkload(
       request: GetWorkloadRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAssuredworkloadsV1.Workload {
+    ) async throws -> GoogleCloudAssuredWorkloadsV1.Workload {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -178,12 +178,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudAssuredworkloadsV1.Workload.self, from: data)
+        GoogleCloudAssuredWorkloadsV1.Workload.self, from: data)
     }
 
     public func listWorkloads(
       request: ListWorkloadsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAssuredworkloadsV1.ListWorkloadsResponse {
+    ) async throws -> GoogleCloudAssuredWorkloadsV1.ListWorkloadsResponse {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.parent as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.parent' is not set or is empty")
@@ -202,7 +202,7 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudAssuredworkloadsV1.ListWorkloadsResponse.self, from: data)
+        GoogleCloudAssuredWorkloadsV1.ListWorkloadsResponse.self, from: data)
     }
 
     public func listOperations(

@@ -111,7 +111,7 @@ public class AssuredWorkloadsServiceClient: Clients.AssuredWorkloadsServiceProto
   /// @Snippet(path: "AssuredWorkloadsService_UpdateWorkload")
   public func updateWorkload(
     request: UpdateWorkloadRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudAssuredworkloadsV1.Workload {
+  ) async throws -> GoogleCloudAssuredWorkloadsV1.Workload {
     try await self.inner.updateWorkload(request: request, options: options)
   }
 
@@ -125,7 +125,7 @@ public class AssuredWorkloadsServiceClient: Clients.AssuredWorkloadsServiceProto
   /// @Snippet(path: "AssuredWorkloadsService_RestrictAllowedResources")
   public func restrictAllowedResources(
     request: RestrictAllowedResourcesRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudAssuredworkloadsV1.RestrictAllowedResourcesResponse {
+  ) async throws -> GoogleCloudAssuredWorkloadsV1.RestrictAllowedResourcesResponse {
     try await self.inner.restrictAllowedResources(request: request, options: options)
   }
 
@@ -145,7 +145,7 @@ public class AssuredWorkloadsServiceClient: Clients.AssuredWorkloadsServiceProto
   /// @Snippet(path: "AssuredWorkloadsService_GetWorkload")
   public func getWorkload(
     request: GetWorkloadRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudAssuredworkloadsV1.Workload {
+  ) async throws -> GoogleCloudAssuredWorkloadsV1.Workload {
     try await self.inner.getWorkload(request: request, options: options)
   }
 
@@ -154,7 +154,7 @@ public class AssuredWorkloadsServiceClient: Clients.AssuredWorkloadsServiceProto
   /// @Snippet(path: "AssuredWorkloadsService_ListWorkloads")
   public func listWorkloads(
     request: ListWorkloadsRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudAssuredworkloadsV1.ListWorkloadsResponse {
+  ) async throws -> GoogleCloudAssuredWorkloadsV1.ListWorkloadsResponse {
     try await self.inner.listWorkloads(request: request, options: options)
   }
 
@@ -165,7 +165,7 @@ public class AssuredWorkloadsServiceClient: Clients.AssuredWorkloadsServiceProto
     byItem: ListWorkloadsRequest, options: GoogleCloudGax.RequestOptions
   ) throws -> any AsyncSequence<Workload, Swift.Error> {
     let listRpc = {
-      (token: Swift.String) async throws -> GoogleCloudAssuredworkloadsV1.ListWorkloadsResponse in
+      (token: Swift.String) async throws -> GoogleCloudAssuredWorkloadsV1.ListWorkloadsResponse in
       var request = byItem
       request.pageToken = token
       return try await self.listWorkloads(request: request, options: options)
@@ -235,17 +235,17 @@ extension Clients {
 
     /// See `AssuredWorkloadsServiceClient.updateWorkload`.
     func updateWorkload(request: UpdateWorkloadRequest) async throws
-      -> GoogleCloudAssuredworkloadsV1.Workload
+      -> GoogleCloudAssuredWorkloadsV1.Workload
 
     /// See `AssuredWorkloadsServiceClient.updateWorkload`.
     func updateWorkload(
       workload: Workload?,
       updateMask: GoogleCloudWkt.FieldMask?,
-    ) async throws -> GoogleCloudAssuredworkloadsV1.Workload
+    ) async throws -> GoogleCloudAssuredWorkloadsV1.Workload
 
     /// See `AssuredWorkloadsServiceClient.restrictAllowedResources`.
     func restrictAllowedResources(request: RestrictAllowedResourcesRequest) async throws
-      -> GoogleCloudAssuredworkloadsV1.RestrictAllowedResourcesResponse
+      -> GoogleCloudAssuredWorkloadsV1.RestrictAllowedResourcesResponse
 
     /// See `AssuredWorkloadsServiceClient.deleteWorkload`.
     func deleteWorkload(request: DeleteWorkloadRequest) async throws
@@ -257,16 +257,16 @@ extension Clients {
 
     /// See `AssuredWorkloadsServiceClient.getWorkload`.
     func getWorkload(request: GetWorkloadRequest) async throws
-      -> GoogleCloudAssuredworkloadsV1.Workload
+      -> GoogleCloudAssuredWorkloadsV1.Workload
 
     /// See `AssuredWorkloadsServiceClient.getWorkload`.
     func getWorkload(
       name: Swift.String,
-    ) async throws -> GoogleCloudAssuredworkloadsV1.Workload
+    ) async throws -> GoogleCloudAssuredWorkloadsV1.Workload
 
     /// See `AssuredWorkloadsServiceClient.listWorkloads`.
     func listWorkloads(request: ListWorkloadsRequest) async throws
-      -> GoogleCloudAssuredworkloadsV1.ListWorkloadsResponse
+      -> GoogleCloudAssuredWorkloadsV1.ListWorkloadsResponse
 
     /// See `AssuredWorkloadsServiceClient.listWorkloads`.
     func listWorkloads(
@@ -306,12 +306,12 @@ extension Clients {
     /// See `AssuredWorkloadsServiceClient.updateWorkload`.
     func updateWorkload(
       request: UpdateWorkloadRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAssuredworkloadsV1.Workload
+    ) async throws -> GoogleCloudAssuredWorkloadsV1.Workload
 
     /// See `AssuredWorkloadsServiceClient.restrictAllowedResources`.
     func restrictAllowedResources(
       request: RestrictAllowedResourcesRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAssuredworkloadsV1.RestrictAllowedResourcesResponse
+    ) async throws -> GoogleCloudAssuredWorkloadsV1.RestrictAllowedResourcesResponse
 
     /// See `AssuredWorkloadsServiceClient.deleteWorkload`.
     func deleteWorkload(
@@ -321,12 +321,12 @@ extension Clients {
     /// See `AssuredWorkloadsServiceClient.getWorkload`.
     func getWorkload(
       request: GetWorkloadRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAssuredworkloadsV1.Workload
+    ) async throws -> GoogleCloudAssuredWorkloadsV1.Workload
 
     /// See `AssuredWorkloadsServiceClient.listWorkloads`.
     func listWorkloads(
       request: ListWorkloadsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAssuredworkloadsV1.ListWorkloadsResponse
+    ) async throws -> GoogleCloudAssuredWorkloadsV1.ListWorkloadsResponse
 
     /// See `AssuredWorkloadsServiceClient.listWorkloads`.
     func listWorkloads(
@@ -387,21 +387,21 @@ extension Clients.AssuredWorkloadsServiceProtocol {
   }
 
   public func updateWorkload(request: UpdateWorkloadRequest) async throws
-    -> GoogleCloudAssuredworkloadsV1.Workload
+    -> GoogleCloudAssuredWorkloadsV1.Workload
   {
     try await self.updateWorkload(request: request, options: .init())
   }
 
   public func updateWorkload(
     request: UpdateWorkloadRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudAssuredworkloadsV1.Workload {
+  ) async throws -> GoogleCloudAssuredWorkloadsV1.Workload {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func updateWorkload(
     workload: Workload?,
     updateMask: GoogleCloudWkt.FieldMask?,
-  ) async throws -> GoogleCloudAssuredworkloadsV1.Workload {
+  ) async throws -> GoogleCloudAssuredWorkloadsV1.Workload {
     let request = UpdateWorkloadRequest().with {
       $0.workload = workload
       $0.updateMask = updateMask
@@ -410,14 +410,14 @@ extension Clients.AssuredWorkloadsServiceProtocol {
   }
 
   public func restrictAllowedResources(request: RestrictAllowedResourcesRequest) async throws
-    -> GoogleCloudAssuredworkloadsV1.RestrictAllowedResourcesResponse
+    -> GoogleCloudAssuredWorkloadsV1.RestrictAllowedResourcesResponse
   {
     try await self.restrictAllowedResources(request: request, options: .init())
   }
 
   public func restrictAllowedResources(
     request: RestrictAllowedResourcesRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudAssuredworkloadsV1.RestrictAllowedResourcesResponse {
+  ) async throws -> GoogleCloudAssuredWorkloadsV1.RestrictAllowedResourcesResponse {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
@@ -441,20 +441,20 @@ extension Clients.AssuredWorkloadsServiceProtocol {
   }
 
   public func getWorkload(request: GetWorkloadRequest) async throws
-    -> GoogleCloudAssuredworkloadsV1.Workload
+    -> GoogleCloudAssuredWorkloadsV1.Workload
   {
     try await self.getWorkload(request: request, options: .init())
   }
 
   public func getWorkload(
     request: GetWorkloadRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudAssuredworkloadsV1.Workload {
+  ) async throws -> GoogleCloudAssuredWorkloadsV1.Workload {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func getWorkload(
     name: Swift.String,
-  ) async throws -> GoogleCloudAssuredworkloadsV1.Workload {
+  ) async throws -> GoogleCloudAssuredWorkloadsV1.Workload {
     let request = GetWorkloadRequest().with {
       $0.name = name
     }
@@ -462,14 +462,14 @@ extension Clients.AssuredWorkloadsServiceProtocol {
   }
 
   public func listWorkloads(request: ListWorkloadsRequest) async throws
-    -> GoogleCloudAssuredworkloadsV1.ListWorkloadsResponse
+    -> GoogleCloudAssuredWorkloadsV1.ListWorkloadsResponse
   {
     try await self.listWorkloads(request: request, options: .init())
   }
 
   public func listWorkloads(
     request: ListWorkloadsRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudAssuredworkloadsV1.ListWorkloadsResponse {
+  ) async throws -> GoogleCloudAssuredWorkloadsV1.ListWorkloadsResponse {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
@@ -483,7 +483,7 @@ extension Clients.AssuredWorkloadsServiceProtocol {
     byItem: ListWorkloadsRequest, options: GoogleCloudGax.RequestOptions
   ) throws -> any AsyncSequence<Workload, Swift.Error> {
     let listRpc = {
-      (token: Swift.String) async throws -> GoogleCloudAssuredworkloadsV1.ListWorkloadsResponse in
+      (token: Swift.String) async throws -> GoogleCloudAssuredWorkloadsV1.ListWorkloadsResponse in
       throw GoogleCloudGax.RequestError.unimplemented
     }
     return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
